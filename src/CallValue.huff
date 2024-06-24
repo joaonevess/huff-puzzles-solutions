@@ -9,5 +9,9 @@
 */
 
 #define macro MAIN() = takes(0) returns(0) {
-    
+    //  Store the call value in memory at position 0x00
+    callvalue 0x00 mstore
+
+    // Return 32 bytes from memory starting at position 0x00
+    0x20 0x00 return
 }
