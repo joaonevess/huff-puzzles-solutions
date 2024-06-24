@@ -32,8 +32,8 @@
     success jumpi               // [prod]
         0x00 0x00 revert        // revert if overflow
 
-    success:                    // [b * a]
-             
+    success:                    // [prod]
+
 }
 
 #define macro MAIN() = takes(0) returns(0) {
