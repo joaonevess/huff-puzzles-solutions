@@ -29,11 +29,11 @@
 
     storeJump:
         0x04 calldataload               // [arg]
-        [STORAGE_SLOT] sstore        // []
+        [STORAGE_SLOT] sstore           // []
         stop
 
     readJump:
-        [STORAGE_SLOT] sload         // [value]
+        [STORAGE_SLOT] sload            // [value]
         0x00 mstore                     // []
         0x20 0x00 return
 }
