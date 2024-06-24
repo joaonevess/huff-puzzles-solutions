@@ -13,5 +13,8 @@
 
 
 #define macro MAIN() = takes(0) returns(0) {
-    
+    0x20 0x00 mstore                                // offset of the string
+    0x09 0x20 mstore                                // string length
+    __RIGHTPAD(0x4f6e6c792048756666) 0x40 mstore    // "Only Huff" in hex
+    0x60 0x00 revert
 }
